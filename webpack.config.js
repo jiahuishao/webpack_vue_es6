@@ -1,12 +1,12 @@
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
-    entry:  __dirname + "/js/main.js",
-    output: {
+    entry:  __dirname + "/js/main.js",  //入口文件
+    output: {                           //出口文件
         path: __dirname + "/app",
         filename: "build.js"
     },
-    module: {
+    module: {                           //依赖
         rules: [
             {
                 test: /\.js?$/,
