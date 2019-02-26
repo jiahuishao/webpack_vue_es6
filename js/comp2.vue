@@ -1,13 +1,13 @@
 <template>
-    <div style="color: red;">{{ message }} ssss</div>
+    <div>{{ name }}</div>
 </template>
 
 <script>
     export default {
-        name: "comp",
+        name: "comp2",
         data(){
-            return {
-                message:'hello world'
+            return{
+                name:"fuyu"
             }
         }
     }

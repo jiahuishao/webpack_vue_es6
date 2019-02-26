@@ -1,10 +1,13 @@
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
-    entry:  __dirname + "/js/main.js",  //入口文件
+    entry: {
+        main:__dirname + "/js/main.js",
+        main2:__dirname + "/js/main2.js"
+    },
     output: {                           //出口文件
         path: __dirname + "/app",
-        filename: "build.js"
+        filename: "[name].js"
     },
     module: {                           //依赖
         rules: [
@@ -26,9 +29,13 @@ module.exports = {
             },
             {
                 test:/\.css$/,
-                use: {
-                    loader: "css-loader",
-                }
+                use: [
+                    {
+                        loader:"style-loader",
+                    },{
+                        loader: "css-loader",
+                    }
+                ]
             }
         ]
     },
